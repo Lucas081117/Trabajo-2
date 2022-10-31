@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+}
+.menu{
+    margin: 0%;
+    color: white;
+    background-image: linear-gradient(to left,black, white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+    display: inline;
+    margin: 10px;
+}
+#section__negro{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: linear-gradient(to left, #666699, white);
+}
+#section__negro__contenedor{
+    color: black;
+    display: grid;
+    grid-template-areas: 
+    'texto1 titulo .'
+    '. titulo .'
+    '. titulo texto2';
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 2fr);
+}
+#section__negro__texto1{
+    grid-area: texto1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#section__negro__titulo{
+    grid-area: titulo;
+    align-self: center;
+    font-weight: 5;
+    font-size: 6rem;
+    background-image: url(https://d3ugyf2ht6aenh.cloudfront.net/stores/060/396/products/sonic-llaveros1-9275a9aed7d0acc77f16527218512352-1024-1024.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#section__negro__texto2{
+    grid-area: texto2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#section__blanco{
+    margin: auto;
+    max-width: 700px;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, #666699, white);
+}
+#section__blanco__card{
+    background-image: linear-gradient(to left, #666699, white);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#section__blanco__card h2{
+    font-size: 2rem;
+}
+.responsive__img{
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+}
+footer{
+    background-image: linear-gradient(red, black);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Seccion responsive*/
+
+@media (max-width: 768px){
+    #section__negro__contenedor{
+        grid-template-areas: 
+        'texto1 texto1'
+        'titulo titulo'
+        'texto2 texto2';
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(3, 2fr);
+    }
+footer{
+        color: white;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
